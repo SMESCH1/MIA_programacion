@@ -1,0 +1,148 @@
+Corrección de la entrega:
+
+EEEEEEEEEEEEEE
+======================================================================
+ERROR: test_basico (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 32, in test_basico
+    self.assertEqual(semana_02.collatz(1), 0)
+AttributeError: module 'semana_02' has no attribute 'collatz'
+
+======================================================================
+ERROR: test_numeros_grandes (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 38, in test_numeros_grandes
+    self.assertEqual(semana_02.collatz(27), 111)  # Número famoso en la conjetura
+AttributeError: module 'semana_02' has no attribute 'collatz'
+
+======================================================================
+ERROR: test_potencias_de_dos (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 43, in test_potencias_de_dos
+    self.assertEqual(semana_02.collatz(16), 4)
+AttributeError: module 'semana_02' has no attribute 'collatz'
+
+======================================================================
+ERROR: test_cantidad_de_claves_letra (tests.test_semana_02.TestDiccionarios)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 77, in test_cantidad_de_claves_letra
+    self.assertEqual(semana_02.cantidad_de_claves_letra(self.diccionario, "p"), 3)  # "perro" "pajaro" y "pez"
+AttributeError: module 'semana_02' has no attribute 'cantidad_de_claves_letra'
+
+======================================================================
+ERROR: test_contar_definiciones (tests.test_semana_02.TestDiccionarios)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 73, in test_contar_definiciones
+    self.assertEqual(semana_02.contar_definiciones(self.diccionario), esperado)
+AttributeError: module 'semana_02' has no attribute 'contar_definiciones'
+
+======================================================================
+ERROR: test_lista_vacia (tests.test_semana_02.TestInvertirLista)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 22, in test_lista_vacia
+    self.assertEqual(semana_02.invertir_lista([]), [])
+AttributeError: module 'semana_02' has no attribute 'invertir_lista'
+
+======================================================================
+ERROR: test_numeros (tests.test_semana_02.TestInvertirLista)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 13, in test_numeros
+    self.assertEqual(semana_02.invertir_lista([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1])
+AttributeError: module 'semana_02' has no attribute 'invertir_lista'
+
+======================================================================
+ERROR: test_strings (tests.test_semana_02.TestInvertirLista)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 17, in test_strings
+    self.assertEqual(semana_02.invertir_lista(["Bogotá", "Rosario", "San Fernando", "San Miguel"]),
+AttributeError: module 'semana_02' has no attribute 'invertir_lista'
+
+======================================================================
+ERROR: test_un_elemento (tests.test_semana_02.TestInvertirLista)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 26, in test_un_elemento
+    self.assertEqual(semana_02.invertir_lista([42]), [42])
+AttributeError: module 'semana_02' has no attribute 'invertir_lista'
+
+======================================================================
+ERROR: test_propagacion_con_obstaculo (tests.test_semana_02.TestPropagar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 90, in test_propagacion_con_obstaculo
+    self.assertEqual(semana_02.propagar([0, 0, 0, -1, 1, 0, 0, 0, -1, 0, 1, 0, 0]),
+AttributeError: module 'semana_02' has no attribute 'propagar'
+
+======================================================================
+ERROR: test_propagacion_simple (tests.test_semana_02.TestPropagar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 86, in test_propagacion_simple
+    self.assertEqual(semana_02.propagar([0, 0, 0, 1, 0, 0]), [1, 1, 1, 1, 1, 1])
+AttributeError: module 'semana_02' has no attribute 'propagar'
+
+======================================================================
+ERROR: test_sin_fuego (tests.test_semana_02.TestPropagar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 99, in test_sin_fuego
+    self.assertEqual(semana_02.propagar([0, 0, 0]), [0, 0, 0])
+AttributeError: module 'semana_02' has no attribute 'propagar'
+
+======================================================================
+ERROR: test_todo_carbonizado (tests.test_semana_02.TestPropagar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 95, in test_todo_carbonizado
+    self.assertEqual(semana_02.propagar([-1, -1, -1]), [-1, -1, -1])
+AttributeError: module 'semana_02' has no attribute 'propagar'
+
+======================================================================
+ERROR: test_todo_encendido (tests.test_semana_02.TestPropagar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 103, in test_todo_encendido
+    self.assertEqual(semana_02.propagar([1, 1, 1]), [1, 1, 1])
+AttributeError: module 'semana_02' has no attribute 'propagar'
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.016s
+
+FAILED (errors=14)
+
