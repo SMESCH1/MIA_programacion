@@ -1,0 +1,39 @@
+Corrección de la entrega:
+
+16
+FFF...........
+======================================================================
+FAIL: test_basico (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 32, in test_basico
+    self.assertEqual(semana_02.collatz(1), 0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_numeros_grandes (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 38, in test_numeros_grandes
+    self.assertEqual(semana_02.collatz(27), 111)  # Número famoso en la conjetura
+AssertionError: 82 != 111
+
+======================================================================
+FAIL: test_potencias_de_dos (tests.test_semana_02.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mlopez/.local/lib/python3.10/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+  File "/home/mlopez/git/homework-checker/01_getting_data/tests/test_semana_02.py", line 43, in test_potencias_de_dos
+    self.assertEqual(semana_02.collatz(16), 4)
+AssertionError: 8.0 != 4
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.004s
+
+FAILED (failures=3)
+
