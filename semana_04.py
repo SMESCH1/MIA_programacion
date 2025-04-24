@@ -42,17 +42,15 @@ def n_mas_altos(nombre_parque, n, nombre_archivo):
 def altura_promedio(nombre_archivo, nombre_parque, especie):
     arboles = arboles_parque(nombre_archivo, nombre_parque)
 
-    # 2. Usar lista por comprensión para filtrar por especie y extraer alturas
+    # lista por comprension para obtener las alturas de los arboles
     try:
         alturas = [float(info_arbol['altura_tot']) for info_arbol in arboles.values() 
                   if info_arbol['nombre_com'] == especie]
 
-        
-        # 3. Manejar el caso de que no haya árboles de esa especie
+        # manejo de excepciones si no hay arboles para ese parque
         if not alturas:
             return None
             
-        # 4. Calcular y devolver el promedio
         return sum(alturas) / len(alturas)
         
     except (ValueError, KeyError) as e:
