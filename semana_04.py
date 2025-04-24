@@ -21,7 +21,7 @@ def arbol_mas_popular(nombre_parque, nombre_archivo):
 # funcion arboles mas altos
 def n_mas_altos(nombre_parque, n, nombre_archivo):
     arboles = arboles_parque(nombre_archivo, nombre_parque)
-    alturas = {}
+    alturas = []
 
     for fila in arboles.values():
         try:
@@ -34,10 +34,18 @@ def n_mas_altos(nombre_parque, n, nombre_archivo):
 
     # Ordenar por altura en orden descendente
     alturas.sort(reverse=True, key=lambda x: x[0])
+    n_altos = alturas[:n]
 
     # Tomar los n primeros
-    return alturas[:n]
+    return n_altos
     
+def altura_promedio(nombre_archivo, nombre_parque, especie):
+    arboles = arboles_parque(nombre_archivo, nombre_parque)
+    alturas = [d['altura_tot'] for d in datos if d['espacio_ve'] == nombre_parque and d['nombre_com'] == especie]
+    if not alturas:
+        return None
+    return sum(alturas) / len(alturas)
+
 
 
 
@@ -45,8 +53,15 @@ def n_mas_altos(nombre_parque, n, nombre_archivo):
 
 if __name__ == '__main__':
     parque = 'CENTENARIO'
+    nombre_especie = 'Jacarandá'
     nombre_archivo = 'arbolado-en-espacios-verdes.csv'
     datos = arboles_parque(nombre_archivo, parque)
     print(f'Total árboles en {parque}:', len(datos))
     popular, cantidad = arbol_mas_popular(parque, nombre_archivo)
     print(f'Árbol más popular: {popular} ({cantidad})')
+    mas_altos = n_mas_altos(parque, 5,  nombre_archivo)
+    print(f'nº más altos: {mas_altos}')
+    altura_prom = altura_promedio(nombre_archivo, parque, nombre_especie)
+    print(f'altura promedio del {nombre_especie} en {parque} es {altura_prom}')
+
+
