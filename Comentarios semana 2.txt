@@ -1,0 +1,2 @@
+SEMANA 02
+La implementación de collatz tiene varios problemas, por un lado, si el número es 1 la función no vuelve a llamarse, solo será un paso y deberá retornar 0. Para los otros valores, solo actualizás el número, pero estás devolviendo eso y no los pasos necesarios para llegar a 1.
