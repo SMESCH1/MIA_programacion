@@ -1,0 +1,1 @@
+El desarrollo es correcto hasta el nivel de avance, pero el archivo no compila porque tiene una definición incompleta y faltan ejercicios. Además no se incluyó el informe ni sus conclusiones
